@@ -14,6 +14,7 @@ from operator import add
 loop=True
 char=[]
 keyChar=[]
+encrypted=""
 while loop==True:
     enterletter=input("Enter e to encrypt,d to decrypt, or q to quit: ")
     if enterletter=='e':
@@ -34,11 +35,8 @@ while loop==True:
             if x>len(associations):
                 x-=len(associations)
             else:
-                encrypted.append(associations[x])
+                encrypted+=associations[x]
         print(encrypted)
-        print(char)
-        print(keyChar)
-        print('It works')
         loop=False
     elif enterletter=='d':
         print('Decrypt')
