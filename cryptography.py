@@ -15,6 +15,7 @@ loop=True
 encrypted=""
 decrypted=""
 while loop==True:
+    loop=False
     enterletter=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if enterletter=='e':
         letters=[]
@@ -58,6 +59,6 @@ while loop==True:
         #loop=False
     elif enterletter=='q':
         print('Goodbye!')
-        loop=False
     else:
         print('Did not understand command, try again.')
+        loop=True
