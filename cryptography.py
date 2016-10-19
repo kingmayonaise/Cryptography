@@ -56,9 +56,7 @@ while loop==True:
         for x in keyandChar:
             if x<0:
                 x+=len(associations)
-            else:
-                print(x)
-                decrypted+=associations[x]
+            decrypted+=associations[x]
         print(decrypted)
         print('Decrypt works')
         loop=False
