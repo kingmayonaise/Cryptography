@@ -30,7 +30,12 @@ while loop==True:
         for n in key:
             keyChar.append(associations.find(n))
         keyandChar=list(map(add, char, keyChar))
-        for x in 
+        for x in keyandChar:
+            if x>len(associations):
+                x-=len(associations)
+            else:
+                encrypted.append(associations[x])
+        print(encrypted)
         print(char)
         print(keyChar)
         print('It works')
