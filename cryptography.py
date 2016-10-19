@@ -28,10 +28,6 @@ while loop==True:
             char.append(associations.find(i))
         for n in key:
             keyChar.append(associations.find(n))
-        if len(keyChar)<len(char):
-            while len(keyChar)<len(char):
-                for x in keyChar:
-                    keyChar.append(x)
         print(char)
         print(keyChar)
         print('It works')
