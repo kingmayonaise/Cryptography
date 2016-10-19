@@ -48,7 +48,6 @@ while loop==True:
         key="Lorem ipsum"
         while len(key)<len(message):
             key+=key[:min(len(key),len(message)-len(key))]
-        print(key)
         for i in message:
             letters.append(associations.find(i))
         for n in key:
@@ -56,7 +55,7 @@ while loop==True:
         keyandChar=list(map(sub, letters, keyChar))
         print(keyandChar)
         for x in keyandChar:
-            if x<len(associations):
+            if x<0:
                 x+=len(associations)
             else:
                 decrypted+=associations[x]
