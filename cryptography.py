@@ -58,7 +58,6 @@ while loop==True:
                 x+=len(associations)
             decrypted+=associations[x]
         print(decrypted)
-        print('Decrypt works')
         loop=False
     elif enterletter=='q':
         print('Goodbye!')
