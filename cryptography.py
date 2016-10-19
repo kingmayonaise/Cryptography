@@ -31,18 +31,18 @@ while loop==True:
         for n in key:
             keyChar.append(associations.find(n))
         keyandChar=list(map(add, letters, keyChar))
+        print(keyandChar)
         for x in keyandChar:
             if x>len(associations):
                 x-=len(associations)
-            else:
-                encrypted+=associations[x]
+            encrypted+=associations[x]
         print(encrypted)
         #loop=False
     elif enterletter=='d':
         letters=[]
         keyChar=[]
         #message=input("Message: ")
-        message="+KF;B(CH=NIZ};R\Dt "
+        message="+KF;B(CH=NIZ}m;R\Dt"
         #key=input("Key: ")
         key="Lorem ipsum"
         while len(key)<len(message):
