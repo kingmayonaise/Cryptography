@@ -25,13 +25,11 @@ while loop==True:
         #key="Lorem ipsum"
         while len(key)<len(message):
             key+=key[:min(len(key),len(message)-len(key))]
-        print(key)
         for i in message:
             letters.append(associations.find(i))
         for n in key:
             keyChar.append(associations.find(n))
         keyandChar=list(map(add, letters, keyChar))
-        print(keyandChar)
         for x in keyandChar:
             if x>len(associations):
                 x-=len(associations)
@@ -52,7 +50,6 @@ while loop==True:
         for n in key:
             keyChar.append(associations.find(n))
         keyandChar=list(map(sub, letters, keyChar))
-        print(keyandChar)
         for x in keyandChar:
             if x<0:
                 x+=len(associations)
