@@ -11,13 +11,25 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 loop=True
+char=[]
+keyChar=[]
 while loop==True:
     enterletter=input("Enter e to encrypt,d to decrypt, or q to quit: ")
     if enterletter=='e':
-        message=input("Message: ")
-        key=input("Key: ")
+        #message=input("Message: ")
+        message="Two plus two = Five"
+        #key=input("Key: ")
+        key="Lorem ipsum"
         for i in message:
-            for 
+            char.append(associations.find(i))
+        for n in key:
+            keyChar.append(associations.find(n))
+        if len(keyChar)<len(char):
+            while len(keyChar)<len(char):
+                for x in keyChar:
+                    keyChar.append(x)
+        print(char)
+        print(keyChar)
         print('It works')
         loop=False
     elif enterletter=='d':
