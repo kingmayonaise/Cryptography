@@ -20,6 +20,10 @@ while loop==True:
         message="Two plus two = Five"
         #key=input("Key: ")
         key="Lorem ipsum"
+        while len(key)<len(message):
+            key+=key[:min(len(key),len(message)-len(key))]
+        print (key)
+        exit
         for i in message:
             char.append(associations.find(i))
         for n in key:
