@@ -15,14 +15,14 @@ loop=True
 encrypted=""
 decrypted=""
 while loop==True:
-    enterletter=input("Enter e to encrypt,d to decrypt, or q to quit: ")
+    enterletter=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if enterletter=='e':
         letters=[]
         keyChar=[]
-        #message=input("Message: ")
-        message="Two plus two = Five"
-        #key=input("Key: ")
-        key="Lorem ipsum"
+        message=input("Message: ")
+        #message="Two plus two = Five"
+        key=input("Key: ")
+        #key="Lorem ipsum"
         while len(key)<len(message):
             key+=key[:min(len(key),len(message)-len(key))]
         print(key)
@@ -41,10 +41,10 @@ while loop==True:
     elif enterletter=='d':
         letters=[]
         keyChar=[]
-        #message=input("Message: ")
-        message="+KF;B(CH=NIZ}m;R\Dt"
-        #key=input("Key: ")
-        key="Lorem ipsum"
+        message=input("Message: ")
+        #message="+KF;B(CH=NIZ}m;R\Dt"
+        key=input("Key: ")
+        #key="Lorem ipsum"
         while len(key)<len(message):
             key+=key[:min(len(key),len(message)-len(key))]
         for i in message:
@@ -58,7 +58,7 @@ while loop==True:
                 x+=len(associations)
             decrypted+=associations[x]
         print(decrypted)
-        loop=False
+        #loop=False
     elif enterletter=='q':
         print('Goodbye!')
         loop=False
