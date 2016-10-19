@@ -18,7 +18,7 @@ print(len(associations))
 while loop==True:
     enterletter=input("Enter e to encrypt,d to decrypt, or q to quit: ")
     if enterletter=='e':
-        char=[]
+        letters=[]
         keyChar=[]
         #message=input("Message: ")
         message="Two plus two = Five"
@@ -28,10 +28,10 @@ while loop==True:
             key+=key[:min(len(key),len(message)-len(key))]
         print(key)
         for i in message:
-            char.append(associations.find(i))
+            letters.append(associations.find(i))
         for n in key:
             keyChar.append(associations.find(n))
-        keyandChar=list(map(add, char, keyChar))
+        keyandChar=list(map(add, letters, keyChar))
         for x in keyandChar:
             if x>len(associations):
                 x-=len(associations)
@@ -40,7 +40,7 @@ while loop==True:
         print(encrypted)
         #loop=False
     elif enterletter=='d':
-        char=[]
+        letters=[]
         keyChar=[]
         #message=input("Message: ")
         message="+KF;B(CH=NIZ};R\Dt "
@@ -50,12 +50,10 @@ while loop==True:
             key+=key[:min(len(key),len(message)-len(key))]
         print(key)
         for i in message:
-            char.append(associations.find(i))
+            letters.append(associations.find(i))
         for n in key:
             keyChar.append(associations.find(n))
-        keyandChar=list(map(sub, char, keyChar))
-        print(len(char))
-        print(len(keyChar))
+        keyandChar=list(map(sub, letters, keyChar))
         print(keyandChar)
         for x in keyandChar:
             if x<len(associations):
