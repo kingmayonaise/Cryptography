@@ -10,6 +10,7 @@ Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
+from operator import add
 loop=True
 char=[]
 keyChar=[]
@@ -28,6 +29,8 @@ while loop==True:
             char.append(associations.find(i))
         for n in key:
             keyChar.append(associations.find(n))
+        keyandChar=list(map(add, char, keyChar))
+        for x in 
         print(char)
         print(keyChar)
         print('It works')
