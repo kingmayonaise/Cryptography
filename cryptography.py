@@ -43,7 +43,7 @@ while loop==True:
         char=[]
         keyChar=[]
         #message=input("Message: ")
-        message="+KF;B(CH=NIZ};R\Dt"
+        message="+KF;B(CH=NIZ};R\Dt "
         #key=input("Key: ")
         key="Lorem ipsum"
         while len(key)<len(message):
