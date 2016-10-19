@@ -14,7 +14,6 @@ from operator import add, sub
 loop=True
 encrypted=""
 decrypted=""
-print(len(associations))
 while loop==True:
     enterletter=input("Enter e to encrypt,d to decrypt, or q to quit: ")
     if enterletter=='e':
