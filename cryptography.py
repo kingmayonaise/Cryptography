@@ -16,8 +16,8 @@ decrypted=""
 while True:
     enterletter=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if enterletter in ('e','d'):
-        message=input('Message:')
-        key=input('Key:')
+        message=input('Message: ')
+        key=input('Key: ')
         letters=[]
         keyChar=[]
         if key=='':
