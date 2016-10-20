@@ -11,54 +11,43 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 from operator import add, sub
-loop=True
 encrypted=""
 decrypted=""
-while loop==True:
-    loop=False
+while True:
     enterletter=input("Enter e to encrypt, d to decrypt, or q to quit: ")
-    if enterletter=='e':
+    if enterletter in ('e','d'):
+        message=input('Message:')
+        key=input('Key:')
         letters=[]
         keyChar=[]
-        message=input("Message: ")
-        #message="Two plus two = Five"
-        key=input("Key: ")
-        #key="Lorem ipsum"
+        if key=='':
+            continue
         while len(key)<len(message):
             key+=key[:min(len(key),len(message)-len(key))]
         for i in message:
             letters.append(associations.find(i))
         for n in key:
             keyChar.append(associations.find(n))
+    elif enterletter=='q':
+        print('Goodbye!')
+        break
+    else:
+        print('Did not understand command, try again.')
+    
+    if enterletter=='e':
+        #key="Lorem ipsum"
         keyandChar=list(map(add, letters, keyChar))
         for x in keyandChar:
             if x>len(associations):
                 x-=len(associations)
             encrypted+=associations[x]
         print(encrypted)
-        #loop=False
     elif enterletter=='d':
-        letters=[]
-        keyChar=[]
-        message=input("Message: ")
         #message="+KF;B(CH=NIZ}m;R\Dt"
-        key=input("Key: ")
         #key="Lorem ipsum"
-        while len(key)<len(message):
-            key+=key[:min(len(key),len(message)-len(key))]
-        for i in message:
-            letters.append(associations.find(i))
-        for n in key:
-            keyChar.append(associations.find(n))
         keyandChar=list(map(sub, letters, keyChar))
         for x in keyandChar:
             if x<0:
                 x+=len(associations)
             decrypted+=associations[x]
         print(decrypted)
-        #loop=False
-    elif enterletter=='q':
-        print('Goodbye!')
-    else:
-        print('Did not understand command, try again.')
-        loop=True
