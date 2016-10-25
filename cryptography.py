@@ -11,10 +11,10 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 from operator import add, sub
-encrypted=""
-decrypted=""
 while True:
     enterletter=input("Enter e to encrypt, d to decrypt, or q to quit: ")
+    encrypted=""
+    decrypted=""
     if enterletter in ('e','d'):
         message=input('Message: ')
         key=input('Key: ')
